@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const APP_URL = "https://delhi-metro-guide.vercel.app";
+const APP_URL = "https://delhimetroguide.in/";
 
 export const metadata: Metadata = {
   metadataBase: new URL(APP_URL),
