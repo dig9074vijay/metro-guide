@@ -95,8 +95,12 @@ export default function HomePageClient() {
         <div className="bg-white dark:bg-neutral-900 rounded-2xl border border-neutral-200 dark:border-neutral-800 shadow-sm p-5 space-y-3">
           {/* Source */}
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 flex items-center justify-center rounded-full bg-blue-600 text-white text-xs font-bold flex-shrink-0 shadow-sm">
-              A
+            <div className="w-8 h-8 flex items-center justify-center flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-7 h-7">
+                <circle cx="12" cy="10" r="7" fill="#2563eb" />
+                <circle cx="12" cy="10" r="3" fill="white" />
+                <line x1="12" y1="17" x2="12" y2="23" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" />
+              </svg>
             </div>
             <StationAutocomplete
               value={source}
@@ -131,8 +135,11 @@ export default function HomePageClient() {
 
           {/* Destination */}
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 flex items-center justify-center rounded-full bg-green-600 text-white text-xs font-bold flex-shrink-0 shadow-sm">
-              B
+            <div className="w-8 h-8 flex items-center justify-center flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-7 h-7">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7Z" fill="#16a34a" />
+                <circle cx="12" cy="9" r="2.5" fill="white" />
+              </svg>
             </div>
             <StationAutocomplete
               value={destination}
