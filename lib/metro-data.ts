@@ -69,6 +69,41 @@ export function normalizeStationName(name: string): string {
   return name.trim().toUpperCase();
 }
 
+/**
+ * Maps old/renamed station names (normalized) to their current name in the
+ * data files. Used by the autocomplete API to surface new names when someone
+ * types an old name.
+ */
+export const STATION_ALIASES: Record<string, string> = {
+  // Renamed stations — key = old name (UPPERCASE), value = exact current data name
+  "HUDA CITY CENTRE": "MILLENNIUM CITY CENTRE GURUGRAM",
+  "PITAMPURA": "MADHUBAN CHOWK (EARLIER PITAMPURA)",
+  "MADHUBAN CHOWK": "MADHUBAN CHOWK (EARLIER PITAMPURA)",
+  "JAGATPUR": "JAGATPUR VILLAGE",
+  "JAGATPUR WAZIRABAD": "JAGATPUR VILLAGE",
+  "MAYUR VIHAR POCKET 1": "SHREE RAM MAYUR VIHAR MANDIR (EARLIER MAYUR VIHAR POCKET-1)",
+  "MAYUR VIHAR POCKET-1": "SHREE RAM MAYUR VIHAR MANDIR (EARLIER MAYUR VIHAR POCKET-1)",
+  "SHREE RAM MANDIR MAYUR VIHAR": "SHREE RAM MAYUR VIHAR MANDIR (EARLIER MAYUR VIHAR POCKET-1)",
+  "SHRI RAM MANDIR MAYUR VIHAR": "SHREE RAM MAYUR VIHAR MANDIR (EARLIER MAYUR VIHAR POCKET-1)",
+  "UDYOG BHAWAN": "SEVA TEERTH (EARLIER UDYOG BHAWAN))",
+  "SEVA TEERTH": "SEVA TEERTH (EARLIER UDYOG BHAWAN))",
+  // Aliases for stations still under old name in data (future-proof)
+  "NORTH PITAMPURA": "NORTH PITAMPURA",
+  "HAIDERPUR VILLAGE": "NORTH PITAMPURA",
+  "PRASHANT VIHAR": "PRASHANT VIHAR",
+  "UTTARI PITAMPURA": "PRASHANT VIHAR",
+  "SONIA VIHAR": "SONIA VIHAR",
+  "NANAKSAR SONIA VIHAR": "SONIA VIHAR",
+  "DERAWAL NAGAR": "DERAWAL NAGAR",
+  "NANAK PYAU DERAWAL NAGAR": "DERAWAL NAGAR",
+  "KHANPUR": "KHANPUR",
+  "KHANPUR VAYUSAINABAD": "KHANPUR",
+  "WEST ENCLAVE": "WEST ENCLAVE",
+  "MANGOLPUR KALAN WEST ENCLAVE": "WEST ENCLAVE",
+  "NABI KARIM": "NABI KARIM",
+  "PAHAR GANJ NABI KARIM": "NABI KARIM",
+};
+
 export function getLineByCode(code: string): MetroLine | undefined {
   return getAllLines().find((ml) => ml.line.line_code === code);
 }
