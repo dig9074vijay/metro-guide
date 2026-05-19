@@ -81,8 +81,8 @@ export default function ContactPage() {
             }
             title="Email"
             description="For general feedback, data corrections, or partnership enquiries."
-            linkHref="mailto:hello@delhimetroguide.in"
-            linkLabel="hello@delhimetroguide.in"
+            linkHref="mailto:dig9074vijay@gmail.com"
+            linkLabel="dig9074vijay@gmail.com"
           />
 
           <ContactCard
@@ -94,8 +94,8 @@ export default function ContactPage() {
             }
             title="GitHub"
             description="Report a bug, request a feature, or contribute to the project."
-            linkHref="https://github.com/delhimetroguide"
-            linkLabel="github.com/delhimetroguide"
+            linkHref="https://github.com/dig9074vijay/metro-guide"
+            linkLabel="github.com/dig9074vijay/metro-guide"
             external
           />
 
@@ -108,8 +108,8 @@ export default function ContactPage() {
             }
             title="Twitter / X"
             description="Follow for updates on new features and station data changes."
-            linkHref="https://twitter.com/delhimetroguide"
-            linkLabel="@delhimetroguide"
+            linkHref="https://twitter.com/dig9074vijay"
+            linkLabel="@dig9074vijay"
             external
           />
         </div>
