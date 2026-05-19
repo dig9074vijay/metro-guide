@@ -1,10 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { RouteResult, RouteStrategy } from "@/lib/metro-types";
 import { StationAutocomplete } from "@/components/metro/StationAutocomplete";
 import { RouteTimeline } from "@/components/metro/RouteTimeline";
 import { RouteSummaryCard } from "@/components/metro/RouteSummaryCard";
+import { SiteFooter } from "@/components/metro/SiteFooter";
 
 const LINE_LEGEND = [
   { name: "Red Line", color: "#c0282c" },
@@ -68,12 +70,12 @@ export default function HomePageClient() {
       {/* Header */}
       <header className="sticky top-0 z-30 bg-white/90 dark:bg-neutral-950/90 backdrop-blur-md border-b border-neutral-100 dark:border-neutral-800">
         <div className="max-w-2xl mx-auto px-4 h-14 flex items-center justify-between">
-          <div className="flex items-center gap-2.5">
+          <Link href="/" className="flex items-center gap-2.5 hover:opacity-80 transition-opacity">
             <span className="text-xl">🚇</span>
             <span className="text-base font-bold text-neutral-900 dark:text-white tracking-tight">
               Delhi Metro Guide
             </span>
-          </div>
+          </Link>
           <span className="text-[11px] text-neutral-400 font-medium hidden sm:block uppercase tracking-widest">
             DMRC
           </span>
@@ -271,10 +273,12 @@ export default function HomePageClient() {
           </div>
         </div>
 
-        <p className="text-center text-xs text-neutral-400 pb-6">
+        <p className="text-center text-xs text-neutral-400 pb-2">
           Fare estimates are approximate. Allow ~2 min/stop + 5 min per interchange.
         </p>
       </main>
+
+      <SiteFooter />
     </div>
   );
 }
