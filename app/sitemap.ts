@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 
-const APP_URL = "https://delhimetroguide.in";
+const APP_URL = "https://delhimetroguide.in/";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
