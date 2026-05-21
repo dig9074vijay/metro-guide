@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const APP_URL = "https://delhimetroguide.in/";
+const APP_URL = "https://delhimetroguide.in";
 
 export const metadata: Metadata = {
   metadataBase: new URL(APP_URL),
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true },
   },
   alternates: {
-    canonical: "/",
+    canonical: APP_URL,
   },
   openGraph: {
     type: "website",
