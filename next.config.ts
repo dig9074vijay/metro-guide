@@ -3,6 +3,16 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   compress: true,
   poweredByHeader: false,
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.delhimetroguide.in" }],
+        destination: "https://delhimetroguide.in/:path*",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
