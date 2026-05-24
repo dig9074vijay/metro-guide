@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.delhimetroguide.in" }],
+      "destination": "https://delhimetroguide.in/:path*",
+      "permanent": true
+    }
+  ]
+}
